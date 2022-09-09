@@ -1,0 +1,41 @@
+.navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li{
+    float: left;
+}
+
+@keyframes navbarGlow {
+    from {
+        box-shadow: 30px #0070f3;
+        color: #0070f3;
+    }
+    to {
+        color: aqua;
+        box-shadow: 50px #0070f3;
+    }
+}
+
+@keyframes navbarZoom {
+    from {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    to {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+.navbar a{
+    display: block;
+    padding: 8px;
+}
+
+.navbar a:hover{
+    animation: navbarGlow 2s, navbarZoom 1s forwards;
+    transform: scale(1.5);
+}
