@@ -50,7 +50,6 @@
     margin-left: 15px;
     animation: navbarZoomOut 0.8s forwards linear;
     background-color: transparent;
-    font-family: "Graffiti font", sans-serif;
     font-size: 2rem;
 }
 
@@ -61,4 +60,17 @@
 
 .navbar a:hover:nth-child(1){
     margin-left: 25px;
+}
+
+.logoWrapper:hover {
+    animation: logoHover forwards 1s;
+}
+
+@keyframes logoHover {
+    75% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: scale(1.2);
+    }
 }
