@@ -11,9 +11,8 @@
     animation: outHover 0.2s forwards ease-in;
     margin-left: 20px;
     margin-top: 20px;
-    float: left;
     clear: both;
-    display: inline-block;
+    float: left;
     
 }
 
@@ -30,15 +29,19 @@ div.inline {
 @keyframes onHover {
     from {
         transform: scale(1);
+        z-index: 1;
     } to {
-        transform: scale(1.2);
+        transform: scale(1.3);
+        z-index: 2;
     }
 }
 
 @keyframes outHover {
     from {
         transform: scale(1.2);
+        z-index: 2;
     } to {
         transform: scale(1);
+        z-index: 1;
     }
 }

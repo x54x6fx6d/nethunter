@@ -123,8 +123,11 @@
     position: absolute;
     top: 20%;
     left: 10%;
-    width: 100px;
-    display: inline-block;
+    width: 1000px;
+    height: 1000px;
+    float: left;
+    display: flex;
+    justify-content: left;
 }
 
 .shopWrapper::after {
