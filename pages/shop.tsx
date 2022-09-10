@@ -30,7 +30,7 @@ function shop({Component, pageProps}: AppProps){
         </div>
         <div className={styles.navbar}>
             <ul>
-                <li><a href="/home">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="/shop">Shop</a></li>
                 <li><a href="/blog">Blog</a></li>
             </ul>
