@@ -10,8 +10,10 @@ function shop({Component, pageProps}: AppProps){
                 <li><a href="/blog">Blog</a></li>
             </ul>
         </div>
-        <div className={styles.shopItem}>
-
+        <div className={styles.shopItems}>
+            <div className={styles.card}>
+                
+            </div>
         </div>
     </div>
 }
