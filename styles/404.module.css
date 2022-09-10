@@ -1,0 +1,85 @@
+.wrapper {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.errorCode {
+    font-weight: 800;
+    font-size: xx-large;
+    position: absolute;
+    top: 38%;
+    left: 48%;
+    animation: codeOut 0.4s forwards ease-out;
+    text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+    transition: text-decoration-color 300ms;
+}
+
+.errorCode:hover {
+    animation: codeOn 0.4s forwards ease-in;
+    text-decoration-color: rgb(255, 255, 255);
+}
+
+.errorReason {
+    font-weight: 500;
+    font-size: large;
+    position: absolute;
+    animation: reasonOut 0.4s forwards ease-in;
+    top: 50%;
+    left: 38%;
+    text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+    transition: text-decoration-color 300ms;
+}
+
+.errorReason:hover {
+    animation: reasonOn 0.4s forwards ease-in;
+    text-decoration-color: rgb(255, 255, 255);
+}
+
+.goBack {
+    position: absolute;
+    top: 55%;
+    left: 47%;
+    font-size: x-large;
+}
+
+.span {
+    text-decoration: underline 0.15em rgb(0, 0, 0);
+    transition: text-decoration-color 300ms;
+}
+
+.span:hover {
+    text-decoration-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+@keyframes codeOn {
+    from {
+        transform: scale(1);
+    } to {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes codeOut {
+    from {
+        transform: scale(1.5);
+    } to {
+        transform: scale(1.0);
+    }
+
+}
+
+@keyframes reasonOn {
+    from {
+        transform: scale(1);
+    } to {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes reasonOut {
+    from {
+        transform: scale(1.5);
+    } to {
+        transform: scale(1);
+    }
+}

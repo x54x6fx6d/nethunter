@@ -1,8 +1,15 @@
 @import url('http://fonts.cdnfonts.com/css/graffiti-font');
 
+.wrapper {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+
 .navbar ul{
-    position: relative;
-    left: 35%;
+    position: absolute;
+    left: 39%;
+    top: 5%;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -14,47 +21,64 @@
 
 @keyframes navbarGlow {
     from {
-        color: #0070f3;
+        color: #0071f2;
     }
     to {
-        color: aqua;
+        color: rgb(50, 71, 251);
     }
 }
 
 @keyframes navbarZoomIn {
     from {
-        margin-left: 15px;
-        margin-right: 15px;
+        transform: scale(1);
     }
     to {
-        margin-left: 25px;
-        margin-right: 25px;
-        transform: scale(1.5);
+        transform: scale(1.2);
     }
 }
 
 @keyframes navbarZoomOut {
     from {
-        margin-left: 25px;
-        margin-right: 25px;
-        transform: scale(1.5);
+        transform: scale(1.2);
     }
     to {
-        margin-left: 15px;
-        margin-right: 15px;
+        transform: scale(1);
     }
 }
+  
 
 .navbar a{
     display: block;
-    margin-left: 15px;
+    margin-left: 25px;
     animation: navbarZoomOut 0.8s forwards linear;
     background-color: transparent;
+    text-decoration: none;
     font-size: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-weight: 600;
+}
+
+.navbar a::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover::before {
+    transform: scaleX(1);
 }
 
 .navbar a:hover{
-    animation: navbarGlow 2s, navbarZoomIn 0.8s forwards linear;
+    animation: navbarGlow 2s forwards, navbarZoomIn 0.8s forwards linear;
     text-shadow: rgb(99, 99, 255) 0px 7px 20px 0px;
 }
 
@@ -62,7 +86,17 @@
     margin-left: 25px;
 }
 
-.logoWrapper:hover {
+.logoWrapper {
+    position: absolute;
+    top: 3%;
+}
+
+.logo {
+    animation: logoHoverOut forwards 1s;
+    position: absolute;
+}
+
+.logo:hover {
     animation: logoHover forwards 1s;
 }
 
@@ -73,4 +107,28 @@
     100% {
         transform: scale(1.2);
     }
+}
+
+@keyframes logoHoverOut {
+    75% {
+        transform: rotate(-360deg);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.shopWrapper {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 100px;
+    display: inline-block;
+}
+
+.shopWrapper::after {
+    content: "";
+    clear: both;
+    display: table;
 }

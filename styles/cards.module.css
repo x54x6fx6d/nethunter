@@ -1,0 +1,44 @@
+.item {
+    background-color: rgb(255, 255, 255);
+    border: 0px solid;
+    border-radius: 25px;
+    overflow: hidden;
+    height: 300px;
+    width: 200px;
+    color: #0071f2;
+    text-align: center;
+    font-size: large;
+    animation: outHover 0.2s forwards ease-in;
+    margin-left: 20px;
+    margin-top: 20px;
+    float: left;
+    clear: both;
+    display: inline-block;
+    
+}
+
+div.inline {
+    display: inline;
+}
+
+.item:hover {
+    animation: onHover 0.2s forwards ease-in;
+    box-shadow: rgb(99, 99, 255) 0px 7px 20px 0px;
+
+}
+
+@keyframes onHover {
+    from {
+        transform: scale(1);
+    } to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes outHover {
+    from {
+        transform: scale(1.2);
+    } to {
+        transform: scale(1);
+    }
+}
