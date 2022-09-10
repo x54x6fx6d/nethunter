@@ -9,6 +9,8 @@ import Price from "./api/Price";
 
 // Card Images
 import kiddions from "./api/assets/kiddions.png";
+import nethunter from "./api/assets/nethunter.png";
+import anubis from "./api/assets/anubis.png";
 
 function shop({Component, pageProps}: AppProps){
     return <div className={styles.wrapper}>
@@ -39,13 +41,21 @@ function shop({Component, pageProps}: AppProps){
                 height={250}                
                 src={kiddions}
                 ></Image>
-                <span>Kiddion Mod Menu Price:<span>{Price("kiddions")}</span></span>
+                <span>Kiddion Mod Menu Price: <span>{Price("kiddions")}</span></span>
             </div>
             <div className={cards.item}>
-                <span>NetHunter Tool Price:<span>{Price("nethunter")}</span></span>
+                <Image
+                height={630}
+                src={nethunter}
+                ></Image>
+                <span>NetHunter Tool Price: <span>{Price("nethunter")}</span></span>
             </div>
             <div className={cards.item}>
-                <span>Anubis Obfuscation Tool</span>
+                <Image
+                height={250}
+                src={anubis}
+                ></Image>
+                <span>Anubis Obfuscation Tool Price: <span>{Price("anubis")}</span></span>
             </div>
         </div>
     </div>
