@@ -1,5 +1,3 @@
-import { Client, Message } from "discord.js"
-
 export class test{
     private testString: string;
     
