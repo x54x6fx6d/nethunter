@@ -27,6 +27,9 @@ function Blog({ Component, pageProps }: AppProps) {
                 <li><a href="/blog">Blog</a></li>
             </ul>
         </div>
+        <button onClick={() => {
+           
+        }}></button>
   </div>
 }
 

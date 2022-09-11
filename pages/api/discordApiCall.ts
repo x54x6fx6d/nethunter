@@ -1,15 +1,14 @@
-import DiscordWebhook, { Webhook } from "discord-webhook-ts";
-
 class discordApiCall {
     constructor() {};
 }
 
 class webhook {
-    private link: string;
-    constructor(id: string, token: string, manual: boolean){
-        if (manual == true){
-            
-        }
+    private id: string;
+    private token: string;
+    constructor(webhookLink: string){
+        let link: string[] = webhookLink.split("/");
+        this.id = link[5];
+        this.token = link[6];
     }
 
     public delete(){
